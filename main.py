@@ -6,7 +6,7 @@ app = func.FunctionApp()
 @app.function_name(name="ServiceBusQueueTrigger1")
 @app.service_bus_queue_trigger(arg_name="message", 
                                 queue_name="genai_ingest_1 ", 
-                                connection="Endpoint=sb://dev-scop.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ygfM0fK5cYiISi4Kxs6uxpM0y5fVPHX7i+ASbJ8IZpQ=")
+                                connection="Endpoint=sb://dev-scop.servicebus.windows.net/;SharedAccessKeyName=test;SharedAccessKey=enT5ugiWnZtqkufezzJ9cDIVWWkUM0Bp0+ASbCKhLbU=")
 def test_function(message: func.ServiceBusMessage):
     try:
         message_body = message.get_body().decode("utf-8")
