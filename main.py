@@ -3,7 +3,7 @@ import azure.functions as func
 
 app = func.FunctionApp()
 
-@app.function_name(name="ServiceBusQueueTrigger1")
+@app.function_name(name="dev-scop")
 @app.service_bus_queue_trigger(arg_name="message", 
                                 queue_name="genai_ingest_1 ", 
                                 connection="Endpoint=sb://dev-scop.servicebus.windows.net/;SharedAccessKeyName=test;SharedAccessKey=enT5ugiWnZtqkufezzJ9cDIVWWkUM0Bp0+ASbCKhLbU=")
